@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой зелёный уголок</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #eae9dc; color: #303b29; font-family: Arial, sans-serif; }
+    .page { position: relative; min-height: 100vh; overflow: hidden; padding: 36px 7% 100px; }
+    header { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 20px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+    .brand { font-weight: bold; }
+    .brand span { color: #7a8550; margin-right: 10px; }
+    main { position: relative; z-index: 1; max-width: 1000px; margin: 95px auto 0; }
+    .label { font-size: 11px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; color: #697345; }
+    h1 { max-width: 780px; margin: 24px 0; font-family: Georgia, serif; font-size: clamp(52px, 8vw, 96px); font-weight: normal; line-height: 1.02; letter-spacing: -3px; }
+    h1 em { color: #747d46; font-weight: normal; }
+    .intro { max-width: 450px; color: #68705d; font-size: 16px; line-height: 1.7; }
+    .card { margin-top: 46px; display: grid; grid-template-columns: 1.15fr 1fr; background: #f5f3e9; border: 1px solid #cdd0bd; border-radius: 22px; overflow: hidden; box-shadow: 0 18px 50px #3541260b; }
+    .profile { padding: 35px; background: #485536; color: #f1f0df; }
+    .profile .label { color: #cad1aa; }
+    .avatar { width: 52px; height: 52px; border: 1px solid #889371; border-radius: 50%; display: grid; place-items: center; margin: 25px 0; font-size: 25px; color: #d3dba7; }
+    h2 { font-family: Georgia, serif; font-weight: normal; font-size: 31px; margin: 0 0 14px; }
+    .group { font-size: 14px; color: #d0d5bd; margin-bottom: 0; }
+    .accounts { padding: 12px 32px; display: flex; flex-direction: column; justify-content: center; }
+    .account { padding: 23px 0; }
+    .account + .account { border-top: 1px solid #d9dccb; }
+    .account p { margin: 10px 0 0; font-size: 20px; overflow-wrap: anywhere; }
+    .note { display: flex; justify-content: space-between; gap: 20px; margin-top: 23px; color: #747b66; font-size: 11px; letter-spacing: 1px; }
+    .vines { position: absolute; top: 0; right: 0; width: 250px; height: 430px; opacity: .65; pointer-events: none; }
+    .grass { position: absolute; bottom: 0; left: 0; width: 100%; height: 95px; pointer-events: none; }
+    @media (max-width: 600px) {
+      .page { padding: 26px 24px 100px; }
+      header { font-size: 10px; letter-spacing: 1px; }
+      main { margin-top: 80px; }
+      h1 { letter-spacing: -2px; }
+      .card { grid-template-columns: 1fr; }
+      .profile, .accounts { padding: 26px; }
+      .vines { right: -70px; opacity: .3; }
+      .note { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Декоративные лианы -->
+    <svg class="vines" viewBox="0 0 250 430" fill="none" aria-hidden="true">
+      <path d="M92-20C40 80 167 96 112 195S163 310 119 400M190-10C144 67 229 137 176 222S207 316 183 355" stroke="#7c8856" stroke-width="2"/>
+      <g fill="#879263">
+        <path d="M88 53Q40 45 56 9Q87 15 88 53ZM94 81Q137 36 150 66Q132 98 94 81ZM122 132Q77 130 79 94Q112 94 122 132ZM113 185Q147 139 164 167Q147 199 113 185ZM105 233Q63 222 68 189Q103 194 105 233ZM123 285Q158 242 173 271Q157 300 123 285ZM132 335Q89 326 96 296Q126 297 132 335ZM124 380Q155 344 169 368Q152 391 124 380Z"/>
+      </g>
+      <g fill="#a4ad83">
+        <path d="M178 49Q146 30 155 6Q183 13 178 49ZM184 99Q213 62 230 88Q214 113 184 99ZM194 155Q160 150 158 122Q188 123 194 155ZM176 219Q205 183 220 208Q204 234 176 219ZM175 272Q142 261 147 234Q175 239 175 272ZM188 316Q213 284 228 307Q211 331 188 316Z"/>
+      </g>
+    </svg>
+    <header><div class="brand"><span>✳</span> Зелёный уголок</div><div>Студенческий проект / 01</div></header>
+    <main>
+      <div class="label">Немного природы, немного кода</div>
+      <h1>Всё начинается<br>с маленького <em>ростка.</em></h1>
+      <p class="intro">Моя первая страница для лабораторной работы по CI/CD. Здесь начинается путь от простого HTML до собственного сайта.</p>
+      <section class="card" aria-label="Информация об авторе">
+        <div class="profile">
+          <div class="label">Автор проекта</div>
+          <div class="avatar" aria-hidden="true">✳</div>
+          <!-- Замени текст ниже на свои ФИО и группу -->
+          <h2>Балеев Станислав Евгеньевич</h2>
+          <p class="group">Группа: М8О-101БВ-26</p>
+        </div>
+        <div class="accounts">
+          <!-- Замени эти два ника на свои -->
+          <div class="account"><div class="label">01 / GitHub</div><p>Slava-silang</p></div>
+          <div class="account"><div class="label">02 / Docker Hub</div><p>slavasilang</p></div>
+        </div>
+      </section>
+      <footer class="note"><span>HTML · DOCKER · GITHUB ACTIONS</span><span>Растём шаг за шагом.</span></footer>
+    </main>
+    <!-- Декоративная трава -->
+    <svg class="grass" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#a8b18c" d="M0 100V50L20 83 28 23 43 86 63 53 65 92 89 39 90 92 120 68 135 95 165 61 173 97 210 80 250 98 310 85 380 99 470 91 600 100 750 94 880 100 990 88 1080 98 1130 76 1170 95 1195 52 1204 94 1230 66 1240 93 1260 30 1272 92 1300 55 1308 89 1330 18 1340 85 1370 42 1378 88 1400 29 1410 80 1440 50V100Z"/>
+      <path fill="#68764a" d="M0 100V77L18 94 36 67 42 97 69 80 82 100 115 88 160 100H1180L1220 89 1240 100 1270 77 1278 98 1305 88 1320 100 1350 68 1357 98 1380 79 1392 97 1420 65 1424 94 1440 82V100Z"/>
+    </svg>
+  </div>
+</body>
+</html>
